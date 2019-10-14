@@ -23,6 +23,13 @@ public class WSPreparacVS : System.Web.Services.WebService
         //Uncomment the following line if using designed components 
         //InitializeComponent(); 
     }
+
+    [WebMethod]
+    public string HolaMundo()
+    {
+        return "Hola Mundo";
+    }
+
     SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["conexionvs"].ConnectionString);
     [WebMethod]
     public DataSet ListPreparacTodosAyro()//genero el metodo para mostrar todos los pedidos
